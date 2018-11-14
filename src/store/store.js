@@ -5,7 +5,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         cart_list: [],
-        totalmoney: "0"
+        cartbook_list: [],
+        totalmoney: "0",
+        user_name: "0"
     },
     mutations: {
         increment(state, content) {

@@ -1,7 +1,7 @@
 <template>
 <!-- <div class="carts">
   <ul>
-    <li v-for="(list,index) in this.$store.state.cart_list ">商品:{{list.name}}----------------------------数量:{{list.text}}个----------------------------价格:{{list.price*list.text}}元</li>
+    <li v-for="(list,index) in this.$store.state.cartbook_list ">商品:{{list.name}}----------------------------数量:{{list.text}}个----------------------------价格:{{list.price*list.text}}元</li>
   </ul>
   <div class="settlement">
     <li >总金额{{this.$store.state.totalmoney}}</li>
@@ -23,7 +23,7 @@
         </tr>
     </thead>
     <tbody>
-      <tr v-for="(list,index) in this.$store.state.cart_list ">
+      <tr v-for="(list,index) in this.$store.state.cartbook_list ">
         <td>{{list.name}}</td>
         <td>{{list.price*list.text}}</td>
         <td>{{list.text}}</td>
@@ -56,7 +56,7 @@ export default {
  methods :{
    totalmoneys () {
      this.$store.state.totalmoney = Number(this.$store.state.totalmoney)
-      this.$store.state.cart_list.forEach((item,index) => {
+      this.$store.state.cartbook_list.forEach((item,index) => {
             this.$store.state.totalmoney += item.price * item.text
 
             console.log(this.$store.state.totalmoney)
@@ -65,7 +65,7 @@ export default {
    },
    cancel () {
      this.$store.state.totalmoney= 0
-     this.$store.state.cart_list = []
+     this.$store.state.cartbook_list = []
    },
    address () {
      this.$router.push("/address")

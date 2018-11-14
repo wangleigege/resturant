@@ -7,25 +7,25 @@
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span>菜品</span>
+          <span>艺术馆</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1" @click="food_choose()">主食</el-menu-item>
-          <el-menu-item index="1-2">副食</el-menu-item>
-          <el-menu-item index="1-3">想笨笨</el-menu-item>
-          <el-menu-item index="1-4">真想</el-menu-item>
+          <el-menu-item index="1-1" @click="food_choose()">绘画</el-menu-item>
+          <el-menu-item index="1-2">书法</el-menu-item>
+          <el-menu-item index="1-3">摄影</el-menu-item>
+          <el-menu-item index="1-4">音乐</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span>饮料</span>
+          <span>经管馆</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1" @click="drink_choose()">碳酸</el-menu-item>
-          <el-menu-item index="1-2">牛奶</el-menu-item>
-          <el-menu-item index="1-3">啤酒</el-menu-item>
-          <el-menu-item index="1-4">鸡尾酒</el-menu-item>
+          <el-menu-item index="1-1" @click="drink_choose()">管理</el-menu-item>
+          <el-menu-item index="1-2">经济</el-menu-item>
+          <el-menu-item index="1-3">投资</el-menu-item>
+          <el-menu-item index="1-4">营销</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <!-- <el-menu-item index="2">
@@ -34,11 +34,11 @@
       </el-menu-item> -->
       <el-menu-item index="3">
         <i class="el-icon-document"></i>
-        <span slot="title">水果</span>
+        <span slot="title">电子书</span>
       </el-menu-item>
       <el-menu-item index="4">
         <i class="el-icon-setting"></i>
-        <span slot="title">零食</span>
+        <span slot="title">动漫</span>
       </el-menu-item>
     </el-menu>
   </el-col>
@@ -48,7 +48,7 @@
 
 <script>
 export default {
-name:"LibTab",
+name:"LibTabBook",
 data () {
   return {
     
@@ -56,7 +56,7 @@ data () {
 },
 methods: {
       food_choose () {
-        this.$router.push("/home/foods")
+        this.$router.push("/book/bookstore")
       },
       drink_choose () {
         this.$router.push("/home/drinks")
