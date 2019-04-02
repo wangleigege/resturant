@@ -41,26 +41,40 @@ export default {
   },
   methods :{
     add (index) {
-      this.$store.state.totalmoney = 0
-      console.log(this.$store.state.cartbook_list)
-     this.$store.state.cartbook_list.push(this.books_list[index])
+      // this.$store.state.totalmoney = 0
+    // let anindex = this.$store.state.cart_list.indexOf(item)
+    //  console.log(anindex)
+      // console.log(this.$store.state.cart_list)
+     this.$store.state.cart_list.push(this.books_list[index])
+     this.totalmoneys()
     },
     increase (item) {
       item.text++
-      this.$store.state.totalmoney = 0
+      // this.$store.state.totalmoney = 0
+      this.totalmoneys()
       console.log(1)
     },
     decrease (item) {
-      this.$store.state.totalmoney = 0
+      // this.$store.state.totalmoney = 0
       if(item.text <= 0)
       {
         item.text = 0
       }else{
         item.text--
       }
+      this.totalmoneys()
       
-      
-    }
+    },
+    totalmoneys () {
+     this.$store.state.totalmoney = 0
+     this.$store.state.totalmoney = Number(this.$store.state.totalmoney)
+      this.$store.state.cart_list.forEach((item,index) => {
+            this.$store.state.totalmoney += item.price * item.text
+
+            console.log(this.$store.state.totalmoney)
+            
+          });
+   },
   }
 
 }

@@ -67,7 +67,7 @@ methods: {
 
 <style>
 .el-col-12{
-  width: 30%;
+  width: 45%;
 }
 .tac{
   width: 30%;
@@ -76,6 +76,6 @@ methods: {
   min-width: 50px;
 }
 .el-menu{
- background: #f1eaea;
+ /* background: #f1eaea; */
 }
 </style>

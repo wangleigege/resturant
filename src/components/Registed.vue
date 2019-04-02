@@ -60,4 +60,7 @@ export default {
  .registed1{
    margin: 20px 0;
  }
+ .el-input el-input--suffix{
+   margin-top: 8%;
+ }
 </style>

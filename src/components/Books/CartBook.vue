@@ -18,20 +18,27 @@
     <thead>
           <tr>
              <th>商品</th>
+             <th>商品图片</th>
              <th>单价</th>
              <th>数量</th>
+             <th>操作</th>
+             
         </tr>
     </thead>
     <tbody>
-      <tr v-for="(list,index) in this.$store.state.cartbook_list ">
+      <tr v-for="(list,index) in this.$store.state.cart_list ">
         <td>{{list.name}}</td>
+        <td><img :src="list.src" alt="" width="50px" height="50px"></td>
         <td>{{list.price*list.text}}</td>
         <td>{{list.text}}</td>
+        <!-- <td> <button @click="remove(index)">删除</button></td> -->
+        <td><el-button @click="remove(index)" type="danger" icon="el-icon-delete" circle></el-button></td>
+        
       </tr>
     </tbody>
   </table>
    <div class="settlement">
-    <li>总金额:{{this.$store.state.totalmoney}}</li>
+    <li>总金额:{{this.$store.state.totalmoney}}元</li>
     <el-button type="success" round @click="totalmoneys()" icon="el-icon-success">确认金额</el-button>
     <el-button type="warning" round @click="cancel()" icon="el-icon-delete">清空购物车</el-button>
     <!-- <input type="button" @click="totalmoneys()" value="确定" > -->
@@ -50,13 +57,17 @@ export default {
     data:''
    }
  },
- mounted () {
-  
- },
+ created() {
+       if(document.documentElement.clientWidth < 800){
+         require('../../../static/apcart.css');
+          
+      }
+  },
  methods :{
    totalmoneys () {
+    this.$store.state.totalmoney = 0
      this.$store.state.totalmoney = Number(this.$store.state.totalmoney)
-      this.$store.state.cartbook_list.forEach((item,index) => {
+      this.$store.state.cart_list.forEach((item,index) => {
             this.$store.state.totalmoney += item.price * item.text
 
             console.log(this.$store.state.totalmoney)
@@ -69,7 +80,11 @@ export default {
    },
    address () {
      this.$router.push("/address")
-   }
+   },
+   remove (index) {
+     this.$store.state.cart_list.splice(index,1)
+     this.totalmoneys()
+    },
  }
  
 }
@@ -84,6 +99,7 @@ li{
   text-align: center;
   float:right;
   /* margin-left:20px; */
+  margin-top: 20px;
   /* border: 3px solid #c8c8c8; */
   font-weight: bold;
   color: rgb(64, 4, 66);
@@ -93,7 +109,7 @@ table{
     border-spacing: 0;
     border: 0;
     text-align: center;
-    width: 50%;
+    width: 100%;
     margin: auto;
 }
 th,td{
@@ -115,8 +131,16 @@ tbody tr:hover{
 .topic{
   text-align: center;
 }
+.shopping{
+    box-shadow: 0px 4px 7px green;
+    width: 50%;
+    margin-left: 25%;
+}
 .shopping p{
    text-align: center;
+   font-size: 25px;
+   margin-top: 20px;
    background-image: linear-gradient(RGB(241,241,241),RGB(226,226,226));  
+   
 }
 </style>

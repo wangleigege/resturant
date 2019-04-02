@@ -41,9 +41,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* body{
+  background: white;
+} */
 .header_tou p{
   text-align: center;
   font-size: 25px;
+  margin-top: 10px;
 }
 .contents{
   display: flex;

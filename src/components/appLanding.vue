@@ -79,12 +79,12 @@ export default {
     };
   },
   created() {
-      if(document.documentElement.clientWidth < 800){
-        this.$router.push('/appland')
-        
-    }else{
-        this.$router.push('/land')
-    }
+       if(document.documentElement.clientWidth < 800){
+          this.$router.push('/appland')
+          
+      }else{
+          this.$router.push('/land')
+      }
   },
   methods: {
     submitForm() {
@@ -122,9 +122,10 @@ export default {
 <style scoped>
   .el-form-item {
     margin-bottom: 22px;
-    width: 26%;
+    width: 70%;
     margin: auto;
     margin-top: 30px;
+    margin-left: 5%;
 }
 .el-button--primary{
    margin-left: 35%;
@@ -134,5 +135,8 @@ export default {
   text-align: center;
   margin-left: 5%;
   margin-top: 5%;
+}
+.el-button--primary[data-v-83f43874]{
+    margin-left: 10%;
 }
 </style>

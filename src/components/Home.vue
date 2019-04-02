@@ -1,5 +1,6 @@
 <template>
   <div class="homes">
+    
    <div class="footers">
     <p class="topic">小<span>购</span>物</p>
     <div class="navitems">

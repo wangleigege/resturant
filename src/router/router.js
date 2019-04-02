@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from "vue-router"
 Vue.use(VueRouter)
-import Foods from '../components/Foods'
-import Drinks from '../components/Drinks'
+import Foods from '../components/FoodsTotal/Foods'
+import Drinks from '../components/FoodsTotal/Drinks'
 import Select from '../components/Select'
-import HelloWorld from '../components/HelloWorld'
+import HelloWorld from '../components/FoodsTotal/HelloWorld'
 import Pays from '../components/Pays'
 import Address from '../components/Address'
 import Registed from '../components/Registed'
@@ -15,6 +15,8 @@ import BookStore from '../components/Books/Book_store'
 import Digital from '../components/Digitals/Digital'
 import Digtal_child from '../components/Digitals/Digtal_child'
 import Landing from '../components/Landing'
+import appLanding from '../components/appLanding'
+
 const routes = [{
         path: "/home",
         component: HelloWorld,
@@ -88,6 +90,10 @@ const routes = [{
     {
         path: '/land',
         component: Landing
+    },
+    {
+        path: '/appland',
+        component: appLanding
     },
 
     {

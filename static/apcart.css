@@ -1,0 +1,10 @@
+.shopping{
+    width: 70%!important;
+}
+.el-button.is-round{
+    width: 75px;
+    font-size: 10px;
+}
+.el-button [class*=el-icon-]+span{
+    margin-left: -10px;
+}
