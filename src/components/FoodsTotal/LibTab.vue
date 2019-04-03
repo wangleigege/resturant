@@ -65,7 +65,7 @@ methods: {
 }
 </script>
 
-<style>
+<style scoped>
 .el-col-12{
   width: 45%;
 }

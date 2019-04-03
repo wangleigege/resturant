@@ -3,7 +3,7 @@
     <div class="book_one" v-for="(item,index) in books_list">
     <img :src="item.src" alt="">
     <el-tag class="introduction" type="success">失误信息</el-tag>
-    <div class="add" @click="add(index)">
+    <div class="add" @click="add(index,item)">
      <el-button type="success" icon="el-icon-check" >添加</el-button>
     </div>
     <div class="increase" @click="increase(item)"><el-button type="primary" icon="el-icon-circle-plus"></el-button></div>
@@ -40,12 +40,17 @@ export default {
     })
   },
   methods :{
-    add (index) {
+    add (index,item) {
       // this.$store.state.totalmoney = 0
-    // let anindex = this.$store.state.cart_list.indexOf(item)
-    //  console.log(anindex)
-      // console.log(this.$store.state.cart_list)
-     this.$store.state.cart_list.push(this.books_list[index])
+      let anindex = this.$store.state.cart_list.indexOf(item)
+      if(anindex == -1) {
+        this.$store.state.cart_list.push(this.books_list[index])
+      }else {
+        item.text++
+      }
+      console.log(anindex)
+      console.log(this.$store.state.cart_list)
+     
      this.totalmoneys()
     },
     increase (item) {

@@ -80,11 +80,11 @@ export default {
   },
   created() {
       if(document.documentElement.clientWidth < 800){
-        this.$router.push('/appland')
-        
-    }else{
-        this.$router.push('/land')
-    }
+          this.$router.push('/appland')
+          
+      }else{
+          this.$router.push('/land')
+      }
   },
   methods: {
     submitForm() {

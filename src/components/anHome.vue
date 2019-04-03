@@ -13,7 +13,7 @@
 			</ul>
     </div>
   </div>
-    <el-carousel :interval="5000" arrow="always">
+    <el-carousel class="gundong" :interval="5000" arrow="always">
       <el-carousel-item v-for="item in dazhe_list" :key="item">
         <h3>
           <img :src="item.src" alt="">
@@ -72,9 +72,9 @@
       </div>
     </div>
     <div class="sidebar">
-       <div class="sider "><i class="el-icon el-icon-edit"></i><a href="javascript:void(0);" @click="bomb_1()">博主联系方式</a></div>
-       <div class="sider "><i class="el-icon el-icon-time"></i><a href="javascript:void(0)" @click="bomb_2()">反馈小建议</a></div>
-       <div class="sider "><i class="el-icon el-icon-star-on"></i><a href="javascript:void(0);" @click="bomb_3()">我的信息管理</a></div>
+       <div class="sider "><i class="el-icon el-icon-edit"></i><a href="javascript:void(0);" @click="bomb_1()">联系</a></div>
+       <div class="sider "><i class="el-icon el-icon-time"></i><a href="javascript:void(0)" @click="bomb_2()">反馈</a></div>
+       <div class="sider "><i class="el-icon el-icon-star-on"></i><a href="javascript:void(0);" @click="bomb_3()">信息</a></div>
        <div class="sider "><span class="el-icon el-icon-d-arrow-left"></span><a href="javascript:void(0);" @click="bomb_4()">活动</a></div>
        <div class="sider "><i class="el-icon el-icon-time"></i><a href="javascript:void(0);" @click="bomb_5()">客服</a></div>
     </div>
@@ -109,7 +109,7 @@ export default {
    }
  },
  created () {
-    
+   
  },
  mounted () {
    this.$store.state.user_name=sessionStorage.getItem("userName")
@@ -166,43 +166,24 @@ export default {
 </script>
 
 <style scoped >
- .homes {
-    height: 100%;
-    width: 100%;
-    /* background-color: #339933; */
-    margin: 0;
-    padding: 0;
-    background: url('../../static/image/anbackground.jpg');
-    background-size: 100%;
-    background-repeat:no-repeat; 
-    background-attachment:fixed;
-}
-
-.footers {
-    /* background-color: #99CC00; */
-    /* background-color: rgba(0 ,205 ,102,0.6); */
-}
-
-.topic {
+ .topic {
     text-align: center;
-    height: 50px;
-    line-height: 50px;
-    color: #eee;
-    text-shadow: 5px 5px 5px #FF0000;
-    font-size: 25px;
 }
 
-.topic span {
-    font-size: 29px;
+p {
+    font-stretch: expanded;
+    font-weight: bold;
 }
-
+.gundong{
+    height: 180px;
+}
 .navitems {
     width: 60%;
-    height: 50px;
-    /* background-color: #222; */
+    height: 30px;
+    background-color: #222;
     margin: auto;
     position: relative;
-    text-align: center;
+    border-radius: 25px;
 }
 
 .navitems ul {
@@ -215,12 +196,9 @@ export default {
 .navitems ul li {
     text-decoration: none;
     list-style: none;
-    line-height: 50px;
-    padding: 0 6%;
-    text-shadow: 5px 5px 5px #FF0000;
+    line-height: 30px;
+    padding: 0 0.5%;
     display: inline-block;
-    /* background-color: rgba(0 ,205 ,102,0.9) 100% 100%; */
-    border-radius: 25px;
 }
 
 .navitems ul a {
@@ -249,18 +227,18 @@ export default {
 }
 
 .el-carousel {
-    width: 70%;
+    width: 80%;
     margin: auto;
     margin-top: 50px;
 }
 
 .el-carousel__container {
-    height: 400px;
+    height: 150px!important;
 }
 
 .el-carousel__container img {
     width: 100%;
-    height: 400px;
+    height: 179px;
 }
 
 .boxs {
@@ -268,22 +246,15 @@ export default {
     margin-top: 50px;
     width: 100%;
     height: 450px;
-    /* background-color: #99CC00; */
-    /* background-color: rgba(0 ,205 ,102,0.3); */
-}
-
-.boxs_inner {
-    width: 80%;
-    margin-left: 10%;
 }
 
 .box {
     float: left;
-    height: 450px;
-    width: 30%;
-    margin: 0 0 0 3%;
+    height: 370px;
+    width: 77%;
+    margin-left: 12%;
     text-align: center;
-    background: rgba(0 ,205 ,102,0.3);
+    background: #f5f9fa;
 }
 
 .img_one {
@@ -314,27 +285,26 @@ export default {
     position: relative;
 }
 
-
-/* .box_three {
+.box_three {
     background: white;
-} */
+}
 
 .sidebar {
-    width: 200px;
-    height: 500px;
+    width: 182px;
+    height: 504px;
     right: -153px;
     top: 150px;
     position: fixed;
+    z-index: 10;
 }
 
 .sider {
-    height: 60px;
+    height: 40px;
     width: 100%;
     margin-top: 10px;
-    /* background: rgb(30, 197, 58); */
+    background: rgb(30, 197, 58);
     border-radius: 10px;
     box-shadow: 6px 3px 1px #343f34;
-    z-index: 999;
 }
 
 .sider a {
@@ -349,13 +319,14 @@ export default {
 }
 
 .sidebar_left {
-    width: 100px;
-    height: 100px;
+    width: 62px;
+    height: 62px;
     left: 10px;
     top: 50px;
     position: fixed;
     border-radius: 50%;
     overflow: hidden;
+    z-index: 10;
 }
 
 .sidebar_left img {
@@ -365,27 +336,27 @@ export default {
 
 .users {
     position: absolute;
-    top: 75px;
-    right: 1%;
-    width: 150px;
-    height: 40px;
-    text-align: center;
+    top: 40px;
+    right: 14px;
+    width: 17%;
+    height: 54px;
 }
 
 .users p {
     color: rgb(228, 100, 100);
     position: absolute;
-    top: 13px;
+    top: -15px;
     left: 10px;
 }
 
 .users img {
     width: 100%;
     height: 100%;
+    display: none;
 }
 
 .el-icon {
-    line-height: 2;
+    line-height: 1;
     font-size: 30px;
 }
 
@@ -393,15 +364,13 @@ export default {
     width: 80%;
     height: 150px;
     margin: auto;
-    margin-top: 30px;
-    position: relative;
+    margin-top: 730px
 }
 
 .footer1 {
     text-align: center;
     position: absolute;
     z-index: 10;
-    top: 60px;
     left: 10%;
     width: 80%;
 }
@@ -417,7 +386,11 @@ export default {
     width: 100%;
     height: 100%;
     position: relative;
-    border-radius: 60px;
-    opacity: 0.5;
 }
+
+.el-message-box {
+    width: 210px;
+    margin-top: 50%;
+}
+
 </style>

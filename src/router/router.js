@@ -16,6 +16,7 @@ import Digital from '../components/Digitals/Digital'
 import Digtal_child from '../components/Digitals/Digtal_child'
 import Landing from '../components/Landing'
 import appLanding from '../components/appLanding'
+import anHome from '../components/anHome'
 
 const routes = [{
         path: "/home",
@@ -94,6 +95,10 @@ const routes = [{
     {
         path: '/appland',
         component: appLanding
+    },
+    {
+        path: '/anhome',
+        component: anHome,
     },
 
     {
