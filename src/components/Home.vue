@@ -173,7 +173,7 @@ export default {
     margin: 0;
     padding: 0;
     background: url('../../static/image/anbackground.jpg');
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat:no-repeat; 
     background-attachment:fixed;
 }

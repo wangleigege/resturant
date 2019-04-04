@@ -11,8 +11,9 @@
       <el-form-item label="确认密码" prop="checkPass">
         <el-input type="password" v-model="ruleForm2.checkPass" autocomplete="off"></el-input>
       </el-form-item>
-    <el-form-item>
+    <el-form-item style="width:100%;text-align:center"> 
       <el-button type="primary" @click="submitForm()">提交</el-button>
+      <el-button type="primary"  @click="back">返回</el-button>
     </el-form-item>
   </el-form>
   </div>
@@ -114,6 +115,9 @@ export default {
           }
          
        
+    },
+    back() {
+      this.$router.push('/')
     }
   }
 };
@@ -125,18 +129,21 @@ export default {
     width: 70%;
     margin: auto;
     margin-top: 30px;
-    margin-left: 5%;
+    /* margin-left: 5%; */
 }
-.el-button--primary{
+/* .el-button--primary{
    margin-left: 35%;
 
-}
+} */
 .land_p{
   text-align: center;
   margin-left: 5%;
   margin-top: 5%;
 }
-.el-button--primary[data-v-83f43874]{
+/* .el-button--primary[data-v-83f43874]{
     margin-left: 10%;
+} */
+.demo-ruleForm{
+ margin-left:-20%;
 }
 </style>

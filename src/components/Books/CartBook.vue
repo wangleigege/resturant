@@ -39,11 +39,11 @@
   </table>
    <div class="settlement">
     <li>总金额:{{this.$store.state.totalmoney}}元</li>
-    <el-button type="success" round @click="totalmoneys()" icon="el-icon-success">确认金额</el-button>
-    <el-button type="warning" round @click="cancel()" icon="el-icon-delete">清空购物车</el-button>
+    <el-button class="cartone" type="success" round @click="totalmoneys()" >确认金额</el-button>
+    <el-button class="cartone" type="warning" round @click="cancel()" >清空购物</el-button>
     <!-- <input type="button" @click="totalmoneys()" value="确定" > -->
     <!-- <input type="button" @click="cancel()" value="取消"> -->
-    <el-button type="warning" round @click="address()" icon="el-icon-edit">填写地址</el-button>
+    <el-button class="cartone" type="warning" round @click="address()" >填写地址</el-button>
     <!-- <input type="button" @click="cancel()" value="结算"> -->
   </div>
  </div>
@@ -139,8 +139,13 @@ tbody tr:hover{
 .shopping p{
    text-align: center;
    font-size: 25px;
-   margin-top: 20px;
+   margin-top: 100px;
    background-image: linear-gradient(RGB(241,241,241),RGB(226,226,226));  
    
+}
+.el-button.is-round{
+  width:150px;
+  padding-left:20px;
+  /* text-align:center; */
 }
 </style>

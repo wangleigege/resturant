@@ -97,6 +97,7 @@
 </template>
 
 <script>
+import { MessageBox } from 'mint-ui';
 export default {
  data () {
    return{
@@ -126,7 +127,7 @@ export default {
 	 return flag;
    },
    select_food () {
-     this.$router.push('/select')
+     this.$router.push('/home')
    },
    select_reg () {
      this.$router.push('/registed')
@@ -141,9 +142,12 @@ export default {
      this.$router.push('/digital')
    },
    bomb_1(){
-      this.$alert('请小姐姐添加=>O(∩_∩)=>wl6wl9', '博主微信', {
-          confirmButtonText: '确定',
-        });
+      // this.$alert('请小姐姐添加=>O(∩_∩)=>wl6wl9', '博主微信', {
+      //     customClass:"analert",
+      //     confirmButtonText: '确定',
+      //   });
+      MessageBox('博主微信', '请小姐姐添加=>O(∩_∩)=>wl6wl9');
+      console.log(1)
    },
    bomb_2(){
      this.$router.push('/feed')
@@ -152,14 +156,17 @@ export default {
      this.$router.push('/address')
    },
    bomb_4(){
-      this.$alert('活动还未开始o(∩_∩)o 哈哈', '', {
-          confirmButtonText: '确定',
-        });
+      // this.$alert('活动还未开始o(∩_∩)o 哈哈', '', {
+      //     confirmButtonText: '确定',
+      //   });
+      MessageBox('活动？', '活动还未开始o(∩_∩)o 哈哈');
    },
    bomb_5(){
-      this.$alert('请小姐姐添加=>O(∩_∩)=>wl6wl9', '客服微信', {
-          confirmButtonText: '确定',
-        });
+      // this.$alert('请小姐姐添加=>O(∩_∩)=>wl6wl9', '客服微信', {
+      //     confirmButtonText: '确定',
+      //   });
+      MessageBox('客服微信', '请小姐姐添加=>O(∩_∩)=>wl6wl9');
+
    }
  }
 }
@@ -168,6 +175,8 @@ export default {
 <style scoped >
  .topic {
     text-align: center;
+    font-size: 60px;
+    margin:  20px 0;
 }
 
 p {
@@ -175,11 +184,11 @@ p {
     font-weight: bold;
 }
 .gundong{
-    height: 180px;
+    height: 3.4rem;
 }
 .navitems {
     width: 60%;
-    height: 30px;
+    height: 1.4rem;
     background-color: #222;
     margin: auto;
     position: relative;
@@ -196,9 +205,10 @@ p {
 .navitems ul li {
     text-decoration: none;
     list-style: none;
-    line-height: 30px;
+    line-height: 1.4rem;
     padding: 0 0.5%;
     display: inline-block;
+    font-size: 15px;
 }
 
 .navitems ul a {
@@ -238,7 +248,7 @@ p {
 
 .el-carousel__container img {
     width: 100%;
-    height: 179px;
+    height: 3.386667rem;
 }
 
 .boxs {
@@ -250,7 +260,7 @@ p {
 
 .box {
     float: left;
-    height: 370px;
+    height: 8.933333rem;
     width: 77%;
     margin-left: 12%;
     text-align: center;
@@ -292,17 +302,21 @@ p {
 .sidebar {
     width: 182px;
     height: 504px;
-    right: -153px;
+    right: -121px;
     top: 150px;
     position: fixed;
     z-index: 10;
 }
+.el-message-box .analert{
+  width: 80%;
+  text-align: center;
+}
 
 .sider {
-    height: 40px;
+    height: 1.533333rem;
     width: 100%;
     margin-top: 10px;
-    background: rgb(30, 197, 58);
+    /* background: rgb(30, 197, 58); */
     border-radius: 10px;
     box-shadow: 6px 3px 1px #343f34;
 }
@@ -310,7 +324,7 @@ p {
 .sider a {
     margin-left: 30px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 38px;
 }
 
 .sider:hover {
@@ -319,8 +333,8 @@ p {
 }
 
 .sidebar_left {
-    width: 62px;
-    height: 62px;
+    width: 92px;
+    height: 92px;
     left: 10px;
     top: 50px;
     position: fixed;
@@ -356,8 +370,8 @@ p {
 }
 
 .el-icon {
-    line-height: 1;
-    font-size: 30px;
+    line-height: 2;
+    font-size: 60px;
 }
 
 .footered {
@@ -373,6 +387,7 @@ p {
     z-index: 10;
     left: 10%;
     width: 80%;
+    display: none;
 }
 
 
@@ -387,10 +402,11 @@ p {
     height: 100%;
     position: relative;
 }
-
+/* 
 .el-message-box {
     width: 210px;
     margin-top: 50%;
-}
+} */
+
 
 </style>

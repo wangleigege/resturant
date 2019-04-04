@@ -102,7 +102,7 @@ export default {
   width: 200px;
   height: 220px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 100px;
   box-shadow: -7px 7px 16px  rgba(46,46,46,0.2)
 }
 img{

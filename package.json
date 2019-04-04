@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "cube-ui": "^1.12.14",
     "element-ui": "^2.4.9",
     "lib-flexible": "^0.3.2",
+    "mint-ui": "^2.2.13",
     "px2rem-loader": "^0.1.9",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
@@ -23,6 +25,7 @@
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
+    "babel-plugin-component": "^1.1.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",

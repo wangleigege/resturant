@@ -140,8 +140,13 @@ tbody tr:hover{
 .shopping p{
    text-align: center;
    font-size: 25px;
-   margin-top: 20px;
+   margin-top: 100px;
    background-image: linear-gradient(RGB(241,241,241),RGB(226,226,226));  
    
+}
+.el-button.is-round{
+  width:150px;
+  padding-left:20px;
+  /* text-align:center; */
 }
 </style>
