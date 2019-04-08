@@ -23,7 +23,7 @@
     <div class="boxs">
       <div class="boxs_inner">
          <div class="box">
-        <img class="img_one" src="static/image/drink.jpg" alt="">
+        <img class="img_one" @click="img_one" src="static/image/drink.jpg" alt="">
         <p>买一song万</p>
         <img class="img_one" src="static/image/drink1.jpg" alt="">
       </div>
@@ -167,6 +167,9 @@ export default {
       //   });
       MessageBox('客服微信', '请小姐姐添加=>O(∩_∩)=>wl6wl9');
 
+   },
+   img_one() {
+     this.$router.push('/home')
    }
  }
 }

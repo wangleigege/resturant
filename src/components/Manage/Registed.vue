@@ -5,6 +5,7 @@
   <el-input type="password" class="registed1" placeholder="请输入你的密码" v-model="input2" clearable suffix-icon="el-icon-more-outline"></el-input>
   <el-button type="primary" icon="el-icon-circle-check-outline" @click="registed()">登陆</el-button>
   <el-button type="primary"  @click="back">返回</el-button>
+  <p @click="turnregisted">excuse？还没有账号密码？</p>
   </div>
 </template>
 
@@ -48,6 +49,9 @@ export default {
     },
     back() {
       this.$router.go(-1)
+    },
+    turnregisted() {
+      this.$router.push('/land')
     }
   }
 };
@@ -66,5 +70,12 @@ export default {
  }
  .el-input el-input--suffix{
    margin-top: 8%;
+ }
+ .registed p{
+   margin: 20px 0;
+ }
+ p:hover{
+   cursor: pointer;
+   color: blue;
  }
 </style>

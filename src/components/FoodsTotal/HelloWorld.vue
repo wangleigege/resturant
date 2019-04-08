@@ -3,7 +3,7 @@
     <header>
       <div class="header_tou">
         <p>欢迎光临</p>
-        <p style="font-size:15px">本店神魔东有 啥都不缺</p>
+        <p style="font-size:10px;">欢迎光临本店 ，请你随意挑选，祝你生活愉快 </p>
       </div>
     </header>
    <section>

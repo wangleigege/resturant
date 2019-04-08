@@ -1,8 +1,8 @@
 <template>
   <div class="foods">
     <div class="food_one" v-for="(item,index) in foods_list">
-    <img :src="item.src" alt="">
-    <el-tag class="introduction" type="success">失误信息</el-tag>
+    <img :src="item.src" alt="" @click="drinksmessage(item)">
+    <el-tag class="introduction" type="success">商品价格：{{item.price}}元</el-tag>
     <div class="add" @click="add(index,item)">
      <el-button type="success" icon="el-icon-check" >添加</el-button>
     </div>
@@ -21,18 +21,18 @@ export default {
   data () {
     return {
       foods_list:[
-        {"src":"static/image/drink.jpg","text":1,"name":"呱呱","price":1},
-        {"src":"static/image/drink1.jpg","text":1,"name":"柠檬汁","price":10},
-        {"src":"static/image/drink2.jpg","text":1,"name":"花里胡哨","price":100000},
-        {"src":"static/image/drink.jpg","text":1,"name":"呱呱","price":1},
-        {"src":"static/image/drink1.jpg","text":1,"name":"柠檬汁","price":10},
-        {"src":"static/image/drink2.jpg","text":1,"name":"花里胡哨","price":100000}
+        {"src":"static/image/drink6.jpg","text":1,"name":"好茶","price":15,"message":"提神醒脑，上好的茶叶"},
+        {"src":"static/image/drink1.jpg","text":1,"name":"红茶","price":10,"message":"夏天火热的不行，快快解暑必备"},
+        {"src":"static/image/drink2.jpg","text":1,"name":"健力宝","price":10,"message":"10元三罐，最新日期"},
+        {"src":"static/image/drink3.jpg","text":1,"name":"美年达","price":9,"message":"三中各送一瓶"},
+        {"src":"static/image/drink4.jpg","text":1,"name":"柠檬汁","price":10,"message":"喝起来很舒服"},
+        {"src":"static/image/drink5.jpg","text":1,"name":"红酒","price":99,"message":"高大上，非你莫属！"}
       ]
     
     }
   },
   methods :{
-    aadd (index,item) {
+    add (index,item) {
       // this.$store.state.totalmoney = 0
       let anindex = this.$store.state.cart_list.indexOf(item)
       if(anindex == -1) {
@@ -71,6 +71,22 @@ export default {
             console.log(this.$store.state.totalmoney)
             
           });
+   },
+   drinksmessage(item) {
+     if(this._isMobile()){
+       MessageBox('商品信息', item.message);
+       console.log(item)
+     }else{
+       this.$alert(item.message, '商品信息', {
+          confirmButtonText: '我了解了',
+        });
+        console.log(item)
+     }
+     
+   },
+   _isMobile() {
+	 let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+	 return flag;
    },
   }
 
@@ -114,5 +130,7 @@ img{
   display: block;
   margin-bottom: 10px;
 }
-
+.foods_number p{
+  margin-left: 5px;
+}
 </style>

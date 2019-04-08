@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import { MessageBox } from 'mint-ui';
 export default {
  name:"Cart",
  data () {
@@ -80,12 +81,27 @@ export default {
      this.$store.state.cart_list = []
    },
    address () {
+     console.log(this.$store.state.user_name)
+     if(this.$store.state.user_name != 0&&null){
      this.$router.push("/address")
-   },
+   }else if(this._isMobile()){
+        MessageBox('友情提示', '请您先登录，谢谢');
+        this.$router.push("/registed")
+    }else{
+       this.$alert('请先登录，谢谢', '友情提示您', {
+          confirmButtonText: '确定',
+        });
+      this.$router.push("/registed")
+    }
+  },
    remove (index) {
      this.$store.state.cart_list.splice(index,1)
      this.totalmoneys()
     },
+    _isMobile() {
+	 let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+	 return flag;
+   },
  }
  
 }

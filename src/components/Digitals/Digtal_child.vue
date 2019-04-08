@@ -1,8 +1,8 @@
 <template>
   <div class="digitals">
     <div class="digital_one" v-for="(item,index) in digtal_list">
-    <img :src="item.src" alt="">
-    <el-tag class="introduction" type="success">失误信息</el-tag>
+    <img :src="item.src" alt="" @click="thingsmessage(item)">
+    <el-tag class="introduction" type="success">商品价格：{{item.price}}元</el-tag>
     <div class="add" @click="add(index,item)">
      <el-button type="success" icon="el-icon-check" >添加</el-button>
     </div>
@@ -21,15 +21,12 @@ export default {
   data () {
     return {
       digtal_list:[
-        {"src":"static/image1/book.jpg","text":1,"name":"说什么","price":1},
-        {"src":"static/image1/book1.jpg","text":1,"name":"看啥","price":10},
-        {"src":"static/image1/book2.jpg","text":1,"name":"想啥","price":100000},
-        {"src":"static/image1/book3.jpg","text":1,"name":"你说啥","price":1},
-        {"src":"static/image1/book4.jpg","text":1,"name":"你愁啥","price":10},
-        {"src":"static/image1/book5.jpg","text":1,"name":"瞅你咋地","price":100000},
-        {"src":"static/image1/book6.jpg","text":1,"name":"再抽一个事实","price":1},
-        {"src":"static/image1/book7.jpg","text":1,"name":"就抽你","price":10},
-        {"src":"static/image1/book8.jpg","text":1,"name":"揪痧","price":100000}
+        {"src":"static/image1/thing.jpg","text":1,"name":"自行车","price":600,"message":"这辆自行车原价1500，现在挥泪大甩卖，快快抢购"},
+        {"src":"static/image1/thing1.jpg","text":1,"name":"耳机","price":50,"message":"走过路过，不要错过，这个耳机听音乐非常舒服"},
+        {"src":"static/image1/thing2.jpg","text":1,"name":"行李箱","price":300,"message":"这个行李可以放好多，物超所值"},
+        {"src":"static/image1/thing3.jpg","text":1,"name":"电风扇","price":100,"message":"这个电风扇是我朋友的，物超所值"},
+        {"src":"static/image1/thing4.jpg","text":1,"name":"包包","price":200,"message":"这个包包是外国名牌，很值得拥有"},
+        {"src":"static/image1/thing5.jpg","text":1,"name":"运动鞋","price":99,"message":"这双鞋很耐穿，只是有点小了，挥泪甩卖啊"},
       ]
     
     }
@@ -79,6 +76,22 @@ export default {
             console.log(this.$store.state.totalmoney)
             
           });
+   },
+   thingsmessage(item) {
+     if(this._isMobile()){
+       MessageBox('商品信息', item.message);
+       console.log(item)
+     }else{
+       this.$alert(item.message, '商品信息', {
+          confirmButtonText: '我了解了',
+        });
+        console.log(item)
+     }
+     
+   },
+   _isMobile() {
+	 let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+	 return flag;
    },
   }
 
