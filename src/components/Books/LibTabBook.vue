@@ -3,6 +3,7 @@
   <el-col :span="12">
     <el-menu
       default-active="2"
+      style="border:none"
       class="el-menu-vertical-demo">
       <el-submenu index="1">
         <template slot="title">
@@ -77,5 +78,8 @@ methods: {
 }
 .el-menu{
  /* background: #f1eaea; */
+}
+.el-menu-vertical-demo el-menu{
+  border:none;
 }
 </style>

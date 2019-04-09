@@ -3,8 +3,8 @@
    <div class="digitals">
       <header>
       <div class="header_tou">
-        <p>其他小物品</p>
-        <p style="font-size:15px">想选神魔自己看啊哦</p>
+        <p>用的香</p>
+        <p style="font-size:15px;color:#83C2FC">看看这些具有古老气息的神器，保证物美价廉</p>
       </div>
     </header>
    <section>
@@ -41,6 +41,7 @@ export default {
 .header_tou p{
   text-align: center;
   font-size: 25px;
+  margin-top: 20px;
 }
 .contents{
   display: flex;

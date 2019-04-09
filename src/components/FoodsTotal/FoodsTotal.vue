@@ -2,8 +2,8 @@
   <div>
     <header>
       <div class="header_tou">
-        <p>欢迎光临</p>
-        <p style="font-size:10px;">欢迎光临本店 ，请你随意挑选，祝你生活愉快 </p>
+        <p>吃的香</p>
+        <p style="font-size:10px;color:#83C2FC">欢迎光临吃的香，请随意选择，各个香喷喷 </p>
       </div>
     </header>
    <section>
@@ -47,7 +47,7 @@ export default {
 .header_tou p{
   text-align: center;
   font-size: 25px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .contents{
   display: flex;

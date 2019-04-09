@@ -1,11 +1,11 @@
 <template>
   <div class="address">
-    <p>请修改配送信息</p>
+    <p>请输入配送信息</p>
     <el-input  placeholder="姓名" v-model="input9" clearable></el-input>
     <el-input  placeholder="电话" v-model="input10" clearable></el-input>
     <el-input class="address_two" type="textarea" :rows="3" placeholder="Please输入配送地址" v-model="textarea"></el-input>
     <el-input class="address_two" type="textarea" :rows="3" placeholder="Please输入其他需求 不一定满足你" v-model="textarea1"></el-input>
-    <el-button type="primary" icon="el-icon-success" @click="pays()">确认修改并保存</el-button>
+    <el-button type="primary" icon="el-icon-success" @click="pays()">确认保存并支付</el-button>
     <el-button type="primary"  @click="back">返回</el-button>
   </div>
 </template>

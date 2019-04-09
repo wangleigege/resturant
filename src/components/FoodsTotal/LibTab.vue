@@ -3,6 +3,7 @@
   <el-col :span="12">
     <el-menu
       default-active="2"
+      style="border:none"
       class="el-menu-vertical-demo">
       <el-submenu index="1">
         <template slot="title">
@@ -69,8 +70,10 @@ methods: {
 .el-col-12{
   width: 45%;
 }
+
 .tac{
   width: 30%;
+  
 }
 .el-submenu .el-menu-item{
   min-width: 50px;

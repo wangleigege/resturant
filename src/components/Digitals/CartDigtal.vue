@@ -39,11 +39,11 @@
   </table>
    <div class="settlement">
     <li>总金额:{{this.$store.state.totalmoney}}元</li>
-    <el-button type="success" round @click="totalmoneys()" icon="el-icon-success">确认金额</el-button>
-    <el-button type="warning" round @click="cancel()" icon="el-icon-delete">清空购物车</el-button>
+    <el-button type="success" round @click="totalmoneys()" >确认金额</el-button>
+    <el-button type="warning" round @click="cancel()" >清空购物车</el-button>
     <!-- <input type="button" @click="totalmoneys()" value="确定" > -->
     <!-- <input type="button" @click="cancel()" value="取消"> -->
-    <el-button type="warning" round @click="address()" icon="el-icon-edit">填写地址</el-button>
+    <el-button type="warning" round @click="address()" :disabled="this.button_disable" >{{changevalue}}</el-button>
     <!-- <input type="button" @click="cancel()" value="结算"> -->
   </div>
  </div>
@@ -54,9 +54,23 @@ export default {
  name:"Cart",
  data () {
    return {
-    data:''
+    data:'',
+    changevaluea:"没有商品",
+    button_disable:true
    }
  },
+  computed: {
+    changevalue() {
+      if(this.$store.state.totalmoney == 0){
+        this.changevaluea = "没有商品"
+        this.button_disable = true
+      }else{
+        this.changevaluea = "输入地址"
+        this.button_disable = false
+      }
+      return this.changevaluea
+    }
+  },
  created() {
        if(document.documentElement.clientWidth < 800){
          require('../../../static/apcart.css');
@@ -81,7 +95,7 @@ export default {
    address () {
      console.log(this.$store.state.user_name)
      if(this.$store.state.user_name != 0&&null){
-     this.$router.push("/address")
+     this.$router.push("/delivery")
    }else if(this._isMobile()){
         MessageBox('友情提示', '请您先登录，谢谢');
         this.$router.push("/registed")
@@ -96,6 +110,10 @@ export default {
      this.$store.state.cart_list.splice(index,1)
      this.totalmoneys()
     },
+    _isMobile() {
+	 let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+	 return flag;
+   },
  }
  
 }

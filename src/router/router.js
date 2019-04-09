@@ -4,9 +4,10 @@ Vue.use(VueRouter)
 import Foods from '../components/FoodsTotal/Foods'
 import Drinks from '../components/FoodsTotal/Drinks'
 import Select from '../components/Select'
-import HelloWorld from '../components/FoodsTotal/HelloWorld'
+import FoodsTotal from '../components/FoodsTotal/FoodsTotal'
 import Pays from '../components/Manage/Pays'
 import Address from '../components/Manage/Address'
+import Delivery from '../components/Manage/Delivery'
 import Registed from '../components/Manage/Registed'
 import Home from '../components/Home'
 import Book from '../components/Books/Book'
@@ -20,7 +21,7 @@ import anHome from '../components/Other/anHome'
 
 const routes = [{
         path: "/home",
-        component: HelloWorld,
+        component: FoodsTotal,
         children: [{
                 path: "foods",
                 name: "Foods",
@@ -71,6 +72,10 @@ const routes = [{
     {
         path: '/address',
         component: Address
+    },
+    {
+        path: '/delivery',
+        component: Delivery
     },
     {
         path: '/pays',

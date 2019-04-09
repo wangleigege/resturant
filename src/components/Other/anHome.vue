@@ -1,13 +1,12 @@
 <template>
   <div class="homes">
-    
    <div class="footers">
-    <p class="topic">小<span>购</span>物</p>
+    <p class="topic"><span>真香</span>小店</p>
     <div class="navitems">
       <ul class="navitems-group1">
-			        <li><a href="javascript:void(0);" @click="select_food()">外卖</a></li>
-              <li><a href="javascript:void(0);" @click="select_book()">二手书</a></li>
-              <li><a href="javascript:void(0);" @click="select_other()">小物品</a></li>
+			        <li><a href="javascript:void(0);" @click="select_food()">吃的香</a></li>
+              <li><a href="javascript:void(0);" @click="select_book()">书的香</a></li>
+              <li><a href="javascript:void(0);" @click="select_other()">用的香</a></li>
               <li><a href="javascript:void(0);" @click="select_reg()">登陆</a></li>
               <li><a href="javascript:void(0);" @click="feed_back()">注册</a></li>
 			</ul>

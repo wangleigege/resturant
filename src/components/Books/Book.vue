@@ -2,8 +2,8 @@
   <div>
     <header>
       <div class="header_tou">
-        <p>欢迎光临小书店</p>
-        <p style="font-size:15px">很荣幸您可以参观 </p>
+        <p>书的香</p>
+        <p style="font-size:15px;color:#83C2FC">欢迎光临书的香，在这里你可以尽情的遨游在书香的海洋里，接受知识的洗礼 </p>
       </div>
     </header>
    <section>
@@ -42,6 +42,7 @@ export default {
 .header_tou p{
   text-align: center;
   font-size: 25px;
+  margin-top: 20px;
 }
 .contents{
   display: flex;
