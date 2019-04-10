@@ -23,11 +23,23 @@
       <div class="boxs_inner">
          <div class="box">
         <img class="img_one" @click="img_one" src="static/image/drink.jpg" alt="">
-        <p>买一song万</p>
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
         <img class="img_one" src="static/image/drink1.jpg" alt="">
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
       </div>
       <div class="box">
         <img class="img_two" src="static/image/food2.jpg" alt="">
+        <p><span style="font-size:15px;color:blue">打折</span>了，快快抢购</p>
+        <div class="img_price">
+          <span class="img_priceold">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+          <span class="img_pricenew">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+        </div>
       </div>
       <div class="box box_three">
         <div class=" box_inner"></div>
@@ -40,11 +52,23 @@
       <div class="boxs_inner">
          <div class="box">
         <img class="img_one" src="static/image/drink.jpg" alt="">
-        <p>买一song万</p>
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
         <img class="img_one" src="static/image/drink1.jpg" alt="">
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
       </div>
       <div class="box">
         <img class="img_two" src="static/image/food2.jpg" alt="">
+         <p><span style="font-size:15px;color:blue">打折</span>了，快快抢购</p>
+        <div class="img_price">
+          <span class="img_priceold">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+          <span class="img_pricenew">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+        </div>
       </div>
       <div class="box box_three">
         <div class=" box_inner"></div>
@@ -57,11 +81,23 @@
       <div class="boxs_inner">
          <div class="box">
         <img class="img_one" src="static/image/drink.jpg" alt="">
-        <p>买一song万</p>
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
         <img class="img_one" src="static/image/drink1.jpg" alt="">
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
       </div>
       <div class="box">
         <img class="img_two" src="static/image/food2.jpg" alt="">
+         <p><span style="font-size:15px;color:blue">打折</span>了，快快抢购</p>
+        <div class="img_price">
+          <span class="img_priceold">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+          <span class="img_pricenew">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+        </div>
       </div>
       <div class="box box_three">
         <div class=" box_inner"></div>
@@ -267,6 +303,7 @@ p {
     margin-left: 12%;
     text-align: center;
     background: #f5f9fa;
+    position: relative;
 }
 
 .img_one {
@@ -288,7 +325,7 @@ p {
 .img_two {
     margin-top: 10%;
     width: 80%;
-    height: 80%;
+    height: 70%;
 }
 
 .img_three {
@@ -391,7 +428,36 @@ p {
     width: 80%;
     display: none;
 }
+.img_price{
+    position: absolute;
+    left: 70%;
+    top: 80%;
+    width: 80px;
+    height: 30px;
+    padding: 1px;
+    background: #e6382f;
+    line-height: 30px;
+}
+.img_priceold{
+    float: left;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
 
+}
+.img_pricenew{
+    float: left;
+    width: 80px;
+    height: 30px;
+    background: #fff;
+    text-align: center;
+    color: #b7bcb8;
+    font-size: 12px;
+    text-decoration: line-through;
+}
 
 /* .footer1 a {
     margin: 0 5%;

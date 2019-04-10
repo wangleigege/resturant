@@ -3,7 +3,7 @@
    <p>欢迎登陆神秘网站</p>
   <el-input  placeholder="请输入你的账号" v-model="input1" clearable suffix-icon="el-icon-more"></el-input>
   <el-input type="password" class="registed1" placeholder="请输入你的密码" v-model="input2" clearable suffix-icon="el-icon-more-outline"></el-input>
-  <el-button type="primary" icon="el-icon-circle-check-outline" @click="registed()">登陆</el-button>
+  <el-button type="primary"  @click="registed()">登陆</el-button>
   <el-button type="primary"  @click="back">返回</el-button>
   <p @click="turnregisted">excuse？还没有账号密码？</p>
   </div>

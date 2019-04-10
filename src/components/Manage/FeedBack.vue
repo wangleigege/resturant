@@ -4,7 +4,7 @@
     <el-input class="phone_name" placeholder="name" v-model="input8" clearable></el-input>
     <el-input class="phone_name" placeholder="phone" v-model="input7" clearable></el-input>
     <el-input class="feedback_two" type="textarea" :rows="3" placeholder="Please输入您的意见或者建议" v-model="textarea"></el-input>
-    <el-button type="primary" icon="el-icon-success" @click="pays()">确认提交</el-button>
+    <el-button type="primary"  @click="pays()">确认提交</el-button>
     <el-button type="primary"  @click="back">返回</el-button>
   </div>
 </template>

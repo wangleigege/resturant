@@ -13,7 +13,7 @@
 			</ul>
     </div>
   </div>
-    <el-carousel :interval="5000" arrow="always">
+    <el-carousel :interval="5000" arrow="always" >
       <el-carousel-item v-for="item in dazhe_list" :key="item">
         <h3>
           <img :src="item.src" alt="">
@@ -23,16 +23,28 @@
     <div class="boxs">
       <div class="boxs_inner">
          <div class="box">
-        <img class="img_one" @click="img_one" src="static/image/drink.jpg" alt="">
-        <p>商家推荐快快入手</p>
-        <img class="img_one" src="static/image/drink1.jpg" alt="">
+        <img class="img_one" @click="img_one" src="static/image/drink3.jpg" alt="">
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
+        <img class="img_one" src="static/image/drink4.jpg" alt="">
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
       </div>
       <div class="box">
         <img class="img_two" src="static/image/food2.jpg" alt="">
+        <p><span style="font-size:15px;color:blue">打折</span>了，快快抢购</p>
+        <div class="img_price">
+          <span class="img_priceold">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+          <span class="img_pricenew">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+        </div>
       </div>
       <div class="box box_three">
         <div class=" box_inner"></div>
-        <img class="img_three" src="static/image/drink.jpg" alt="">
+        <img class="img_three" src="static/image/drink5.jpg" alt="">
         <img class="img_three" src="static/image/drink1.jpg" alt="">
       </div>
       </div>
@@ -40,34 +52,58 @@
     <div class="boxs">
       <div class="boxs_inner">
          <div class="box">
-        <img class="img_one" src="static/image/drink.jpg" alt="">
-        <p>商品打折期间</p>
-        <img class="img_one" src="static/image/drink1.jpg" alt="">
+        <img class="img_one" src="static/image/drink6.jpg" alt="">
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
+        <img class="img_one" src="static/image/food.jpg" alt="">
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
       </div>
       <div class="box">
-        <img class="img_two" src="static/image/food2.jpg" alt="">
+        <img class="img_two" src="static/image/food1.jpg" alt="">
+        <p><span style="font-size:15px;color:blue">打折</span>了，快快抢购</p>
+        <div class="img_price">
+          <span class="img_priceold">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+          <span class="img_pricenew">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+        </div>
       </div>
       <div class="box box_three">
         <div class=" box_inner"></div>
-        <img class="img_three" src="static/image/drink.jpg" alt="">
-        <img class="img_three" src="static/image/drink1.jpg" alt="">
+        <img class="img_three" src="static/image/food2.jpg" alt="">
+        <img class="img_three" src="static/image/food3.jpg" alt="">
       </div>
       </div>
     </div>
     <div class="boxs">
       <div class="boxs_inner">
          <div class="box">
-        <img class="img_one" src="static/image/drink.jpg" alt="">
-        <p>仅售5元麻利点</p>
-        <img class="img_one" src="static/image/drink1.jpg" alt="">
+        <img class="img_one" src="static/image1/book.jpg" alt="">
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
+        <img class="img_one" src="static/image1/book1.jpg" alt="">
+        <p>活动期间<sapn style="color:blue;font-size:15px">惊爆价</sapn>：15元</p>
       </div>
       <div class="box">
-        <img class="img_two" src="static/image/food2.jpg" alt="">
+        <img class="img_two" src="static/image1/book2.jpg" alt="">
+        <p><span style="font-size:15px;color:blue">打折</span>了，快快抢购</p>
+        <div class="img_price">
+          <span class="img_priceold">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+          <span class="img_pricenew">
+            <i>¥</i>
+            <span>15</span>
+          </span>
+        </div>
       </div>
       <div class="box box_three">
         <div class=" box_inner"></div>
-        <img class="img_three" src="static/image/drink.jpg" alt="">
-        <img class="img_three" src="static/image/drink1.jpg" alt="">
+        <img class="img_three" src="static/image1/book5.jpg" alt="">
+        <img class="img_three" src="static/image1/book4.jpg" alt="">
       </div>
       </div>
     </div>
@@ -87,10 +123,25 @@
       <p v-else>欢迎光临: <span style="color:black;">{{this.$store.state.user_name}}</span></p>
     </div>
     <div class="footered">
-      <p class="footer1">
-       本残品还在测试中  请勿下单  保证不送
-      </p>
-      <img src="static/image1/footer1.jpg" alt="">
+      
+      <el-tooltip content="正在刷牙" placement="top" class="anfootered">
+        <el-button>作者</el-button>
+      </el-tooltip>
+      <el-tooltip content="报警电话：110 救火电话：119" placement="bottom" effect="light" class="anfootered">
+        <el-button>联系电话</el-button>
+      </el-tooltip>
+      <el-tooltip content="842469533" placement="top" class="anfootered">
+        <el-button>QQ</el-button>
+      </el-tooltip>
+      <el-tooltip content="aa33155221@126.com" placement="bottom" effect="light" class="anfootered">
+        <el-button>邮箱</el-button>
+      </el-tooltip>
+      <el-tooltip content="你猜猜" placement="top" class="anfootered">
+        <el-button>地址</el-button>
+      </el-tooltip>
+      <el-tooltip content="未经股作者同意 不得用于商业" placement="bottom" effect="light" class="anfootered">
+        <el-button>盗版维权</el-button>
+      </el-tooltip>
     </div>
 
   </div>
@@ -252,13 +303,13 @@ export default {
 }
 
 .el-carousel {
-    width: 70%;
+    width: 50%;
     margin: auto;
     margin-top: 50px;
 }
 
 .el-carousel__container {
-    height: 400px;
+    height: 500px;
 }
 
 .el-carousel__container img {
@@ -287,8 +338,15 @@ export default {
     margin: 0 0 0 3%;
     text-align: center;
     background: rgba(0 ,205 ,102,0.3);
+    position: relative;
+   
 }
-
+.box img:hover{
+  /* border:3px solid blue;
+  box-sizing:border-box; */
+  opacity: 0.8;
+  cursor: pointer;
+}
 .img_one {
     width: 80%;
     height: 40%;
@@ -308,11 +366,11 @@ export default {
 .img_two {
     margin-top: 10%;
     width: 80%;
-    height: 80%;
+    height: 70%;
 }
 
 .img_three {
-    width: 100%;
+    width: 80%;
     height: 45%;
     position: relative;
 }
@@ -397,17 +455,17 @@ export default {
     height: 150px;
     margin: auto;
     margin-top: 30px;
-    position: relative;
+    text-align: center;
 }
 
-.footer1 {
+/* .footer1 {
     text-align: center;
     position: absolute;
     z-index: 10;
     top: 60px;
     left: 10%;
     width: 80%;
-}
+} */
 
 
 /* .footer1 a {
@@ -416,11 +474,47 @@ export default {
     font-size: 15px;
 } */
 
-.footered img {
+/* .footered img {
     width: 100%;
     height: 100%;
-    position: relative;
     border-radius: 60px;
     opacity: 0.5;
+} */
+.anfootered{
+    text-align: center;
+    z-index: 10;
+    top: 60px;
+    left: 10%;
+    margin: 20px 3%;
+}
+.img_price{
+    position: absolute;
+    left: 30%;
+    top: 90%;
+    width: 160px;
+    height: 20px;
+    padding: 1px;
+    background: #e6382f;
+    line-height: 20px;
+}
+.img_priceold{
+    float: left;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.img_pricenew{
+    float: left;
+    width: 80px;
+    height: 20px;
+    background: #fff;
+    text-align: center;
+    color: #b7bcb8;
+    font-size: 12px;
+    text-decoration: line-through;
 }
 </style>
